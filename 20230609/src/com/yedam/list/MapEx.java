@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
+import com.yedam.Member;
+
 public class MapEx {
 	public static void main(String[] args) {
 		// 키, 값
@@ -31,6 +33,17 @@ public class MapEx {
 			Integer val = map.get(key);
 			System.out.printf("키: %s, 값: %d \n", key, val);
 		}
+		System.out.println("-------------------------");
+		// key: Mamver, val: Integer.
+		Member member = new Member("user1","1111");
+		Map<Member, Integer> members = new HashMap<>();
+		members.put(new Member("user1", "1111"), 100);
+		members.put(new Member("user2","2222"), 120);
+		members.put(new Member("user1","1111"), 140);
+		members.put(member, 140);
 		
+		System.out.println(members.size());
+		Integer point = members.get(member);
+		System.out.println(point);
 	}
 }

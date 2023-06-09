@@ -46,8 +46,8 @@ public class Member {
 
 	@Override
 	public int hashCode() {
-//		return super.hashCode();
-		return this.id.hashCode();
+		return super.hashCode();
+//		return this.id.hashCode();
 	}
 
 	@Override
